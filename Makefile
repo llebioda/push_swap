@@ -22,13 +22,13 @@ all: $(NAME)
 
 bonus: $(BONUS_NAME)
 
-$(NAME): $(OBJDIR) $(OBJS)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-$(BONUS_NAME): $(OBJDIR) $(BONUS_OBJS)
+$(BONUS_NAME): $(BONUS_OBJS)
 	$(CC) $(CFLAGS) -o $(BONUS_NAME) $(BONUS_OBJS)
 
-$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADERS)
+$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADERS) | $(OBJDIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OBJDIR):

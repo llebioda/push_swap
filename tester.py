@@ -1,8 +1,14 @@
 import sys, time, random, subprocess
 from colorama import Fore
+from os.path import exists
 
 PUSH_SWAP_PATH = "./push_swap"
 CHECKER_PATH = "./checker"
+for path in ["./checker", "./checker_linux", "./checker_Mac"]:
+	if (exists(path)):
+		CHECKER_PATH = path
+		break
+
 MIN_VALUE = -2147483648
 MAX_VALUE = 2147483647
 LINE_LIMIT = 5500

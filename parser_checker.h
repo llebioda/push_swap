@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser_checker.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llebioda <lowanlebioda@gmail.com>          +#+  +:+       +#+        */
+/*   By: llebioda <llebioda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:18:12 by llebioda          #+#    #+#             */
-/*   Updated: 2024/11/26 15:47:17 by llebioda         ###   ########.fr       */
+/*   Created: 2024/12/09 10:29:38 by llebioda          #+#    #+#             */
+/*   Updated: 2024/12/09 10:29:39 by llebioda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

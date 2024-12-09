@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llebioda <llebioda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 10:01:23 by llebioda          #+#    #+#             */
-/*   Updated: 2024/11/26 15:45:16 by llebioda         ###   ########.fr       */
+/*   Created: 2024/12/09 10:26:10 by llebioda          #+#    #+#             */
+/*   Updated: 2024/12/09 10:26:12 by llebioda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ int	check_duplicated(t_list *a, t_list *b)
 {
 	t_list	*bb;
 
-	if (a == NULL || b == NULL)
-		return (0);
 	while (a != NULL)
 	{
 		bb = b;
@@ -70,6 +68,17 @@ int	check_duplicated(t_list *a, t_list *b)
 			bb = bb->next;
 		}
 		a = a->next;
+	}
+	while (b != NULL)
+	{
+		bb = b->next;
+		while (bb != NULL)
+		{
+			if (b->value == bb->value)
+				return (1);
+			bb = bb->next;
+		}
+		b = b->next;
 	}
 	return (0);
 }
