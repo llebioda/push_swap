@@ -17,10 +17,7 @@ int	main(int argc, char **argv)
 	t_list	*a;
 
 	if (argc <= 1)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
+		return (0);
 	a = parse_args(argc - 1, &(argv[1]));
 	if (a == NULL)
 	{
